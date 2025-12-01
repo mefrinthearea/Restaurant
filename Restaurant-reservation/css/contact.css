@@ -1,0 +1,67 @@
+:root {
+  --red: #C41E3A;
+  --dark: #1a1a1a;
+  --offwhite: #FAFAFA;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: 'Cormorant Garamond', serif;
+  background:var(--red);
+  color:var(--dark);
+  margin:0;
+}
+
+.navbar{
+  background: rgba(255,255,255,0.97) !important;
+  backdrop-filter: blur(10px);
+  padding:1.5rem 0;
+  box-shadow:0 4px 20px rgba(0,0,0,0.08);
+  z-index: 1030;
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.3rem;
+  color: var(--red) !important;
+  font-weight: 700;
+}
+.nav-link {
+  color: var(--dark) !important;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.nav-link:hover { color: var(--red) !important; }
+
+.contact-section{ padding-top:150px; padding-bottom:80px }
+.contact-box{
+  max-width:640px;
+  margin:0 auto;
+  background:#fff;
+  padding:3rem 2rem;
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  text-align:center;
+}
+.contact-box h1{
+  font-family:'Playfair Display', serif;
+  font-size:3.2rem;
+  margin-bottom:1rem;
+  color:var(--red);
+}
+.lead{ font-size:1.15rem; opacity:0.9 }
+
+.contact-info p{
+  font-size:1.15rem;
+  margin:0.8rem 0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+}
+.contact-info i{ font-size:1.4rem; color:var(--red) }
+
+@media (max-width:576px){
+  .contact-box{ padding:2rem }
+  .contact-box h1{ font-size:2.2rem }
+}
