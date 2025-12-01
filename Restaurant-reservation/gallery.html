@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery – Trattoria Roma</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="gallery.html">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    body { background: var(--offwhite); padding-top: 120px; }
+
+    .gallery-header {
+      text-align: center;
+      padding: 100px 20px 80px;
+      background: var(--red);
+      color: white;
+      margin-bottom: 60px;
+    }
+    .gallery-header h1 { font-family: 'Playfair Display', serif; font-size: 6rem; text-shadow: 4px 4px 15px rgba(0,0,0,0.4); }
+    .gallery-header p { font-size: 1.4rem; opacity: 0.95; max-width: 700px; margin: 20px auto 0; }
+
+    .card {
+      border: none;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      transition: all 0.4s ease;
+    }
+    .card:hover { transform: translateY(-12px); box-shadow: 0 22px 45px rgba(196,30,58,0.22); }
+
+    .card-img-top { height: 320px; object-fit: cover; }
+
+    /* Video card styling */
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      height: 320px;
+      background: #000;
+      cursor: pointer;
+    }
+    .video-wrapper video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .play-icon {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 4.5rem;
+      color: white;
+      opacity: 0.9;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .video-wrapper.playing .play-icon { opacity: 0; }
+
+    .card-body { background: white; padding: 1.6rem; text-align: center; }
+    .card-title { font-family: 'Playfair Display', serif; font-size: 1.55rem; color: var(--red); }
+
+    @media (max-width: 768px) {
+      .gallery-header h1 { font-size: 4.5rem; }
+      .card-img-top, .video-wrapper { height: 260px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Same navbar – Gallery active -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Trattoria Roma</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="gallery-header">
+    <h1>Gallery</h1>
+    <p>Take a look inside our home – where every corner tells a story of love, food, and family.</p>
+  </header>
+
+  <!-- Gallery Grid -->
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+
+      <!-- VIDEO CARD (click to play) -->
+      <div class="col mb-5">
+        <div class="card h-100">
+          <div class="video-wrapper" onclick="this.classList.toggle('playing'); this.querySelector('video').paused ? this.querySelector('video').play() : this.querySelector('video').pause()">
+            <video poster="images/gallery/video-poster.jpg" preload="metadata" autoplay muted loop>
+              <!-- Change the video source to the correct path for pizza.mp4 -->
+              <source src="video/pizza.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <i class='bx bxs-play-circle play-icon'></i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Pizza Making at Trattoria Roma</h5>
+            <p class="card-text">Click to view!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Regular photo cards -->
+      <div class="col mb-5">
+        <div class="card h-100">
+          <img src="images/room.jpg" class="card-img-top" alt="Interior">
+          <div class="card-body">
+            <h5 class="card-title">Cozy Dining Room</h5>
+            <p class="card-text">Warm lights and checkered tablecloths – just like Nonna’s house.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col mb-5">
+        <div class="card h-100">
+          <img src="images/oven.jpg" class="card-img-top" alt="Pizza oven">
+          <div class="card-body">
+            <h5 class="card-title">Wood-Fired Oven</h5>
+            <p class="card-text">Our 1978 oven still burning every day.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col mb-5">
+        <div class="card h-100">
+          <img src="images/pasta.jpg" class="card-img-top" alt="Handmade pasta">
+          <div class="card-body">
+            <h5 class="card-title">Handmade Pasta</h5>
+            <p class="card-text">Fresh pasta rolled every morning.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col mb-5">
+        <div class="card h-100">
+          <img src="images/carbonara.jpg" class="card-img-top" alt="Carbonara Romana">
+          <div class="card-body">
+            <h5 class="card-title">Carbonara Romana</h5>
+            <p class="card-text">The real Roman recipe.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col mb-5">
+        <div class="card h-100">
+          <img src="images/tiramisu.jpg" class="card-img-top" alt="Tiramisù">
+          <div class="card-body">
+            <h5 class="card-title">Tiramisù</h5>
+            <p class="card-text">Made fresh every day.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

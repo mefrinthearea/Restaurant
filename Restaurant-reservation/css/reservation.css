@@ -1,0 +1,30 @@
+/* css/reservation.css */
+#reservationModal .modal-content {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+#reservationModal .modal-header {
+  background: var(--red);
+  color: white;
+  border-bottom: none;
+}
+
+#reservationModal .btn-reserve-modal {
+  background: white;
+  color: var(--red);
+  font-weight: 600;
+}
+
+#reservationModal .btn-reserve-modal:hover {
+  background: var(--green);
+  color: white;
+}
+
+.table-danger { background-color: #f8d7da !important; }
+.table-warning { background-color: #fff3cd !important; }
+
+#reservationModal .alert {
+  border-radius: 12px;
+}
