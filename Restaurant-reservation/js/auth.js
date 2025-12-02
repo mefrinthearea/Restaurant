@@ -2,7 +2,7 @@
 class AuthManager {
   static users = {
     user:  { password: "1234", role: "visitor", name: "Mario Rossi" },
-    admin: { password: "admin", role: "admin",   name: "Admin Trattoria" }
+    admin: { password: "admin", role: "admin",   name: "Admin" }
   };
 
   static login(username, password) {

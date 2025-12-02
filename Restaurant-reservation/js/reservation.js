@@ -44,7 +44,7 @@ class ReservationSystem {
     return bookings[key] || [];
   }
 
-  static bookTable(date, time, tableNumber, name, guests) {
+  static bookTable(date, time, tableNumber, name, guests, number) {
     const bookings = this.getBookings();
     const key = `${date}_${time}`;
     if (!bookings[key]) bookings[key] = [];
@@ -52,6 +52,7 @@ class ReservationSystem {
     bookings[key].push({
       table: tableNumber,
       name: name.trim(),
+      number: number.trim(),
       guests: parseInt(guests),
       bookedAt: new Date().toLocaleString("en-GB")
     });
@@ -93,6 +94,10 @@ class ReservationSystem {
         <div class="col-md-6">
           <label class="form-label fw-semibold">Your Name</label>
           <input type="text" id="resName" class="form-control" value="${user.name}">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label fw-semibold">Number</label>
+          <input type="text" id="resNumber" class="form-control" value="">
         </div>
         <div class="col-md-6">
           <label class="form-label fw-semibold">Guests</label>
@@ -201,6 +206,7 @@ class ReservationSystem {
               <td>${b.name}</td>
               <td>${b.guests} guests</td>
               <td><small>${b.bookedAt}</small></td>
+              <td><small>${b.number}</small></td>
               <td>
                 <button class="btn btn-sm btn-outline-danger delete-btn"
                         data-date="${dateStr}" data-time="${time}" data-idx="${idx}">
@@ -224,7 +230,7 @@ class ReservationSystem {
         <table class="table table-hover">
           <thead class="table-dark">
             <tr>
-              <th>Date</th><th>Time</th><th>Table</th><th>Name</th><th>Guests</th><th>Booked</th><th>Action</th>
+              <th>Date</th><th>Time</th><th>Table</th><th>Name</th><th>Guests</th><th>Booked</th><th>Number</th><th>Action</th>
             </tr>
           </thead>
           <tbody>${rows || empty}</tbody>
@@ -306,8 +312,9 @@ class ReservationSystem {
         const date = document.getElementById('resDate').value;
         const time = document.getElementById('resTime').value;
         const name = document.getElementById('resName').value.trim() || user.name;
+        const number = document.getElementById('resNumber').value.trim() || user.number;
 
-        this.bookTable(date, time, tableNum, name, guests);
+        this.bookTable(date, time, tableNum, name, guests, number);
         alert(`Table ${tableNum} booked successfully!\n${date} at ${time}`);
         refresh();
       };
