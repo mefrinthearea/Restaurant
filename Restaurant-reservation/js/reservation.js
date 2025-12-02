@@ -1,5 +1,3 @@
-// js/reservation.js – FINAL 100% WORKING VERSION (December 2025)
-
 const TOTAL_TABLES = 20;
 const STORAGE_KEY = "trattoria_reservations";
 const TIME_SLOTS = ["20:00", "20:30", "21:00", "21:30", "22:00", "22:30", "23:00", "23:30"];
