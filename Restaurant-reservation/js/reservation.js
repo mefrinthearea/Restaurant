@@ -91,11 +91,11 @@ class ReservationSystem {
       <div class="row g-3 mb-4">
         <div class="col-md-6">
           <label class="form-label fw-semibold">Your Name</label>
-          <input type="text" id="resName" class="form-control" value="${user.name}">
+          <input type="text" id="resName" class="form-control">
         </div>
         <div class="col-md-6">
           <label class="form-label fw-semibold">Number</label>
-          <input type="text" id="resNumber" class="form-control" value="">
+          <input type="text" id="resNumber" class="form-control">
         </div>
         <div class="col-md-6">
           <label class="form-label fw-semibold">Guests</label>
