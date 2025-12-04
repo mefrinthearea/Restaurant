@@ -68,7 +68,7 @@ class ReservationSystem {
     }
   }
 
-  // ==================== VISITOR SCREEN ====================
+  // VISITOR SCREEN 
   static renderVisitorScreen(user) {
     const today = new Date().toISOString().split('T')[0];
 
@@ -181,7 +181,7 @@ class ReservationSystem {
     });
   }
 
-  // ==================== ADMIN SCREEN ====================
+  // ADMIN SCREEN 
   static renderAdminScreen() {
     const bookings = this.getBookings();
     let rows = '';
