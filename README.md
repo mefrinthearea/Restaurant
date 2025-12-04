@@ -1,2 +1,7 @@
 # Restaurant
-Restauran page with reservation system 
+Restaurant Reservation System		
+		
+#Group Members 
+Mefarishvili Giorgi
+Papidze Lexo
+Javakhidze Andria
