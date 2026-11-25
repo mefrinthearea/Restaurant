@@ -2,6 +2,41 @@
 
 A collaborative frontend project combining a restaurant website with an interactive table reservation prototype.
 
+## Application screenshots
+
+Trattoria Roma is a restaurant website and client-side
+reservation system built with HTML, CSS, JavaScript and Bootstrap.
+
+### Landing page
+
+![Homepage](docs/screenshots/restaurant-homepage.png)
+
+### Restaurant website
+
+| Menu | Gallery |
+| --- | --- |
+| ![Menu](docs/screenshots/restaurant-menu.png) | ![Gallery](docs/screenshots/restaurant-gallery.png) |
+
+### Reservation workflow
+
+![Booking form](docs/screenshots/restaurant-booking-form.png)
+
+![Table selection](docs/screenshots/restaurant-table-selection.png)
+
+### Booking confirmation
+
+![Confirmation](docs/screenshots/restaurant-booking-confirmation.png)
+
+### User access and administration
+
+| Demo login | Admin panel |
+| --- | --- |
+| ![Login](docs/screenshots/restaurant-login.png) | ![Admin](docs/screenshots/restaurant-admin.png) |
+
+Reservations are stored locally in the browser.
+The login and administration features are educational
+demonstrations, not production authentication.
+
 ## Features
 
 - Multi-page restaurant website with menu, gallery, about and contact pages.
